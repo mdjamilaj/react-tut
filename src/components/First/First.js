@@ -4,7 +4,6 @@ import './First.css';
 
 
 function First(props) {
-    console.log(props);
     return (
         <div className="center">
             <div className="property-card">

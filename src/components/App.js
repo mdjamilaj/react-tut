@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import First from './First/First'
+import Counter from './Counter/Counter'
 
 function App() {
   let a = '';
@@ -28,6 +29,8 @@ function App() {
           <First res={data1}/>
           <First res={data2}/>
           <First res={data3}/>
+          
+          <Counter />
         </div>
       </header>
       <div>
