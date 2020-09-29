@@ -1,36 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Counter.css';
 
-decrease = () => {
-    this.setState({
-        count: this.state.count - 1
-    })
-}
+function Counter() {
+    const [counter, setCounter] = useState(0);
+    const increment = () => {
+      setCounter((prev) => prev + 1)
+    }
+    const decrement = () => {
+      setCounter((prev) => prev - 1)
+    }
+    const changeCounter = (val) => {
+        console.log(val.target.value);
+        setCounter((prev) => prev = val.target.value ? val.target.value : 0)
+        console.log(counter);
+    }
 
-increase = () => {
-    this.setState({
-        count: this.state.count - 1
-    })
-    console.log(count);
-} 
+    const ref = () => {
+        React.createRef();
+        new Event('input', { bubbles: true });
+    }
 
-function Counter(props) {
     return (
         <div>
             <h1>
-                <button onClick={ this.decrease }>-</button>
-                <input type="number" defaultValue={count}/>
-                <button onClick={ this.increase }>+</button>
+                <button onClick={decrement}>-</button>
+                <input readOnly type="number" value={counter} onChange={(e) => {changeCounter(e)}} ref={ref}/>
+                <button onClick={increment}>+</button>
             </h1>
         </div>
     );
 }
-
-function tick() {
-    ReactDOM.render(
-      <Counter count={0} />,
-      document.getElementById('root')
-    );
-  }
 
 export default Counter;

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 import First from './First/First'
 import Counter from './Counter/Counter'
+import Nav from './Nav/Nav'
+import Video from './Nav/Video'
+
 
 function App() {
   let a = '';
@@ -21,16 +24,29 @@ function App() {
     designation: 'কাউন্সিলর',
     description: 'জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমানের ৪৫তম শাহাদাত বার্ষিকী ও জাতীয় শোক দিবস নানা আয়োজনে পালিত হয়েছে সিলেট সিটি করপোরেশনে। দিবস উপলক্ষে নগর ভবন প্রাঙ্গনে বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা নিবেদন করা হয়। শনিবার (১৫ আগস্ট ২০২০) সকাল.....',
   }
+
+  const [toggle, setToggle] = useState(0);
+
+  const toggler = () => {
+    setToggle((prev) => !prev)
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Welcome to react app</h1>
+        <div>
+          {toggle}
+            <Nav toggle={toggle}/>
+            <Video setToggle={toggler} />
+        </div>
         <div className="card">
           <First res={data1}/>
           <First res={data2}/>
           <First res={data3}/>
           
-          <Counter />
+          <Counter/>
         </div>
       </header>
       <div>

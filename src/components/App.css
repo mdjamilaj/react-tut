@@ -4,5 +4,12 @@
 .card{
   display: flex;
 }
-
+.active{
+  background: linear-gradient(45deg, red , blue);
+  color: white;
+}
+h1{
+  margin: 0%;
+  padding: 10px 0px 10px 0px;
+}
 
