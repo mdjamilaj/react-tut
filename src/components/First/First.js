@@ -7,7 +7,7 @@ function First(props) {
     return (
         <div className="center">
             <div className="property-card">
-                <a href="#">
+                <a href="">
                     <div className="property-image">
                         <div className="property-image-title">
                             <h5>{ props.res.name }</h5>
