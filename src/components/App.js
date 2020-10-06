@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios'
 import './App.css';
 
 import First from './First/First'
@@ -7,6 +8,12 @@ import Nav from './Nav/Nav'
 import Video from './Nav/Video'
 import Sidebar from './Sidebar/Sidebar'
 
+componentDidMount() {
+  const apiUrl = 'https://api.github.com/users/hacktivist123/repos';
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => console.log('This is your data', data));
+}
 
 function App() {
   let a = '';
@@ -25,6 +32,9 @@ function App() {
     designation: 'কাউন্সিলর',
     description: 'জাতির পিতা বঙ্গবন্ধু শেখ মুজিবুর রহমানের ৪৫তম শাহাদাত বার্ষিকী ও জাতীয় শোক দিবস নানা আয়োজনে পালিত হয়েছে সিলেট সিটি করপোরেশনে। দিবস উপলক্ষে নগর ভবন প্রাঙ্গনে বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা নিবেদন করা হয়। শনিবার (১৫ আগস্ট ২০২০) সকাল.....',
   }
+
+  
+
 
   const [toggle, setToggle] = useState(1);
   const toggler = () => {

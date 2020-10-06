@@ -12,7 +12,7 @@
 }
 .navbar__title {
     margin-right: auto;
-    padding: 12px 16px;
+    padding: 12px 16px !important;
 }
 .navbar__item {
     padding: 16px 16px;
