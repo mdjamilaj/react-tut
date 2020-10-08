@@ -5,23 +5,25 @@ import './Pages.css';
 
 function User(props) {
     return (
+        <div className="col-lg-3 col-md-6 col-sm-12 justify-content-center">
         <div className="center">
-
-            { props.res }
-            {/* <div className="property-card">
+            <div className="property-card">
                 <a href="">
                     <div className="property-image">
                         <div className="property-image-title">
-                            <h5>{ props.res.name }</h5>
                         </div>
                     </div>
                 </a>
                 <div className="property-description">
-                    <h5> { props.res.designation } </h5>
-                    <p className="description"> { props.res.description } </p>
+                    <h5> { props.name } </h5>
+                    <span> { props.email } </span>
+                    <p> { props.street } </p>
+                    <p> { props.city } </p>
+                    <p className="description"> { props.address } </p>
                 </div>
-            </div> */}
+            </div>
         </div>
+    </div>
     );
 }
 

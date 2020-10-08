@@ -9,13 +9,9 @@ function Post(props) {
             <div className="center">
                 <div className="property-card">
                     <a href="">
-                        <div className="property-image">
-                            <div className="property-image-title">
-                            </div>
-                        </div>
+                        <div className="property-image-title"><h6> { props.title } </h6></div>
                     </a>
                     <div className="property-description">
-                        <h5> { props.title } </h5>
                         <p className="description"> { props.body } </p>
                     </div>
                 </div>

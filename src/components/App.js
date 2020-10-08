@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'
+// import axios from 'axios'
 import './App.css';
 
 import First from './First/First'
@@ -93,16 +93,20 @@ function App() {
                     ))}
                 </div>
           </div>
-          {/* <div className={(resourceType === 'users') ? 'display-block' : 'display-none'}>
-                {items.map(item => {
-                  <User res={JSON.stringify(item)}/>
-                })}
+          <div className={(resourceType === 'users') ? 'display-block' : 'display-none'}>
+            <div className="row">
+                {items.map(item => (
+                  <User name={JSON.stringify(item.name)} email={JSON.stringify(item.email)} address={JSON.stringify(item.address)} street={JSON.stringify(item.street)}  city={JSON.stringify(item.city)}/>
+                ))}
+            </div>
           </div>
           <div className={(resourceType === 'comments') ? 'display-block' : 'display-none'}>
-                {items.map(item => {
-                  <Comment res={JSON.stringify(item)}/>
-                })}
-          </div> */}
+            <div className="row">
+                {items.map(item => (
+                  <Comment name={JSON.stringify(item.name)} email={JSON.stringify(item.email)} body={JSON.stringify(item.body)}/>
+                ))}
+            </div>
+          </div>
         </div>
       </header>
       <div>

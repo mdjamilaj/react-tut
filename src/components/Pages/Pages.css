@@ -72,6 +72,12 @@ p
   background-repeat:no-repeat;
 }
 
+.property-image-title {
+  color: #3d24c5;
+  font-size: 20px;
+  padding: 10px;
+}
+
 .property-description
 {
   background-color: #FAFAFC;
@@ -85,7 +91,6 @@ p
   padding: 0.5em 1em;
   text-align:center;
 }
-.property-image-title{color: #14ff9d;}
 
 .property-social-icons
 {
